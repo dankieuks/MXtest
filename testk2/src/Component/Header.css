@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+}
+button {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  font-weight: 400;
+  float: right;
+  border: 1px solid #e1dede;
+  border-radius: 4px;
+  background-color: aliceblue;
+}
