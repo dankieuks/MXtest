@@ -6,7 +6,6 @@ function About() {
   const [showQuotes, setShowQuotes] = useState("");
   const [authorQuotes, setAuthorQuotes] = useState([]);
   const [indexRandom, setIndexRandom] = useState([]);
-  const [random, setRandom] = useState(0);
   const [showAuthorQuotes, setShowAuthorQuotes] = useState(false);
 
   useEffect(() => {
@@ -19,13 +18,15 @@ function About() {
   }, []);
 
   const handleRandom = () => {
-    setShowAuthorQuotes(false);
+    setShowAuthorQuotes(true);
+    setShowQuotes(true);
     const randomIndex = Math.floor(Math.random() * indexRandom.length);
     setShowQuotes(indexRandom[randomIndex]);
   };
 
   const handleAuthorQuotes = (author) => {
     setShowAuthorQuotes(true);
+    setShowQuotes(false);
     const quotesByAuthor = indexRandom.filter(
       (quote) => quote.author === author
     );
@@ -38,7 +39,9 @@ function About() {
       <h2>{showQuotes.content}</h2>
       <div className="who">
         <h4 onClick={() => handleAuthorQuotes(showQuotes.author)}>
-          {showQuotes.author}
+          {showQuotes
+            ? showQuotes.author
+            : authorQuotes.length > 0 && authorQuotes[0].author}
         </h4>
         <h4>
           <FiArrowDown />

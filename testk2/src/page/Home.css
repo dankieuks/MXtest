@@ -20,38 +20,3 @@ h5 {
 li {
   text-decoration: none;
 }
-.quote-container {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-}
-
-.quote {
-  font-size: 1.5rem;
-  font-style: italic;
-}
-
-.author {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.category {
-  margin-top: 1rem;
-}
-
-.random-btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.error {
-  color: red;
-  margin-bottom: 1rem;
-}
